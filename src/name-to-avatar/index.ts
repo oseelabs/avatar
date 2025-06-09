@@ -12,11 +12,15 @@ export function nameToAvatar(name: string, config?: NameToAvatarConfig): string 
     if (config) {
         const c = {
             size: config.size || 100,
-            backgroundColor: config.backgroundColor || '#F0F0F0',
-            color: config.color || '#000000',
+            backgroundColor: config.backgroundColor || 'F0F0F0',
+            color: config.color || '000000',
         };
 
-        return `https://placehold.co/${c.size}x${c.size}/${c.backgroundColor}/${c.color}?text=${name}`
+        // Remove '#' prefix from color codes if present
+        const bgColor = c.backgroundColor.replace(/^#/, '');
+        const textColor = c.color.replace(/^#/, '');
+
+        return `https://placehold.co/${c.size}x${c.size}/${bgColor}/${textColor}?text=${name}`
     }
 
     return `https://placehold.co/100x100/F0F0F0/000000?text=${name}`;
