@@ -1,6 +1,6 @@
 {
   "name": "@oseelabs/avatar",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "type": "module",
   "description": "A package that generate avatar URL from user's initials.",
   "main": "dist/index.js",
