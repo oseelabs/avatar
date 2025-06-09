@@ -11,6 +11,8 @@ yarn-error.log*
 
 .vscode/*
 
+.DS_Store
+
 # Secrets
 .github
-./dist/
+dist
