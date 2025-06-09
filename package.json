@@ -1,0 +1,47 @@
+{
+  "name": "@oseelabs/avatar",
+  "version": "1.0.0",
+  "description": "A package that generate avatar URL from user's initials.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "avatar", "placeholder", "initials", "image", "generator", "typescript"
+  ],
+  "author": {
+    "email": "info.stingerdeveloper@gmail.com",
+    "name": "Lazaro Osee",
+    "url": "https://oseelabs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oseelabs/avatar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oseelabs/avatar/issues"
+  },
+  "homepage": "https://github.com/oseelabs/avatar#readme",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tsc --project tsconfig.mjs.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "eslint": "^9.28.0",
+    "typescript": "^5.5.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

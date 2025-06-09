@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../src/name-to-avatar/types.ts"],"names":[],"mappings":"AACA;;;;;GAKG;AACH,MAAM,MAAM,kBAAkB,GAAG;IAE7B,uEAAuE;IACvE,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,8DAA8D;IAC9D,eAAe,CAAC,EAAE,MAAM,CAAC;IACzB,wDAAwD;IACxD,KAAK,CAAC,EAAE,MAAM,CAAC;CAClB,CAAA"}

@@ -1,0 +1,33 @@
+name: Publish to npmjs
+
+on:
+  release:
+    types: [created] # Trigger this workflow when a new GitHub Release is created
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # Needed if you want to push to GitHub Packages too, though this workflow focuses on npmjs
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org/' # Explicit set for npmjs
+
+      - name: Install dependencies
+        run: npm ci # Use npm ci for clean installations in CI environments
+
+      - name: Build package
+        run: npm run build
+
+      - name: Publish to npmjs
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

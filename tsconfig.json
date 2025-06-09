@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleDetection": "force",
+
+    /* Modules */
+    "module": "es2020",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "checkJs": false,
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "skipLibCheck": true,
+
+    /* Interop Constraints*/
+    "isolatedModules": true,
+
+    /* Completeness */
+    // "skipDefaultLibCheck": true,
+
+    /* Advanced */
+    "downlevelIteration": true,
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
