@@ -24,10 +24,8 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org/' # Explicit set for npmjs
 
-      - name: Authenticate with npm registry
-        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: git config --global user.email "odiraoseelazaro@students.tukenya.ac.ke"
+      - run: git config --global user.name "oseelabs"
 
       - name: Install dependencies
         run: npm ci # Use npm ci for clean installations in CI environments
