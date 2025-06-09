@@ -1,6 +1,9 @@
 name: Publish to npmjs
 
 on:
+  push:
+    branches:
+      - main
   release:
     types: [created] # Trigger this workflow when a new GitHub Release is created
 
